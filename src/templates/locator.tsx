@@ -36,7 +36,7 @@ const searcher = provideHeadless({
   experienceKey: "page-track-imp-searchexp",
   locale: "en",
   environment: Environment.SANDBOX,
-  verticalKey: "location",
+  verticalKey: "locations",
 });
 
 const Locator: Template<TemplateRenderProps> = () => {

@@ -1,6 +1,7 @@
 // src/components/StoreLocator.tsx
 
 import * as React from "react";
+import { useEffect } from "react";
 import {
   MapboxMap,
   FilterSearch,
@@ -19,6 +20,10 @@ import MapPin from "./MapPin";
 
 const StoreLocator = (): JSX.Element => {
   const searchActions = useSearchActions();
+
+  useEffect(() => {
+    searchActions.setVertical("locations");
+  }, []);
 
   const handleFilterSelect = (params: OnSelectParams) => {
     const locationFilter: SelectableStaticFilter = {
